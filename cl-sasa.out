@@ -1,0 +1,5117 @@
+ Processing passed argument "iseed=43245"
+ Parameter: iseed <- "43245"
+ Processing passed argument "temp=300"
+ Parameter: temp <- "300"
+1
+                 Chemistry at HARvard Macromolecular Mechanics
+                   (CHARMM) - Developmental Version 35b1     August 15, 2008   
+       Copyright(c) 1984-2001  President and Fellows of Harvard College
+                              All Rights Reserved
+      Current operating system: Linux-2.6.24.4-64.fc8(x86_64)@master
+                 Created on  3/28/14 at  1:28: 1 by user: javidi      
+
+            Maximum number of ATOMS:     25140, and RESidues:       14000
+            Current HEAP size:         2048000, and STACK size:    500000
+
+ Processing passed argument "iseed=43245"
+ Parameter: ISEED <- "43245"
+ Processing passed argument "temp=300"
+ Parameter: TEMP <- "300"
+ RDTITL> * NATIVE CONTACT DMAT PRINT OUT
+ RDTITL> *
+  
+ CHARMM>    set paramdir "/home/gns/Charmm/c35b1r1/toppar"
+ Parameter: PARAMDIR <- ""/home/gns/Charmm/c35b1r1/toppar""
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 read form name @paramdir/"top_all27_prot_na.rtf"
+ Parameter: PARAMDIR -> ""/home/gns/Charmm/c35b1r1/toppar""
+ VOPEN> Attempting to open::/home/gns/Charmm/c35b1r1/toppar/top_all27_prot_na.rtf::
+ OPNLGU> Unit  1 opened for READONLY access to /home/gns/Charmm/c35b1r1/toppar/top_all27_prot_na.rtf
+  
+ CHARMM>    read rtf card unit 1
+ MAINIO> Residue topology file being read from unit   1.
+ TITLE> *>>>>>>>>CHARMM22 ALL-HYDROGEN TOPOLOGY FILE FOR PROTEINS <<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>> AND NUCLEIC ACIDS <<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>> INCLUDES PHI, PSI CROSS TERM MAP (CMAP) CORRECTION <<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>>   JULY, 2004    <<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> * ALL COMMENTS TO ADM JR. VIA THE CHARMM WEB SITE: WWW.CHARMM.ORG
+ TITLE> *               PARAMETER SET DISCUSSION FORUM
+ TITLE> *
+  
+ CHARMM>    close unit 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 read form name @paramdir/"par_all27_prot_na.prm"
+ Parameter: PARAMDIR -> ""/home/gns/Charmm/c35b1r1/toppar""
+ VOPEN> Attempting to open::/home/gns/Charmm/c35b1r1/toppar/par_all27_prot_na.prm::
+ OPNLGU> Unit  1 opened for READONLY access to /home/gns/Charmm/c35b1r1/toppar/par_all27_prot_na.prm
+  
+ CHARMM>    read param card unit 1
+
+          PARAMETER FILE BEING READ FROM UNIT  1
+ TITLE> *>>>>> CHARMM22 ALL-HYDROGEN PARAMETER FILE FOR PROTEINS <<<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>> AND NUCLEIC ACIDS <<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> *>>>>> INCLUDES PHI, PSI CROSS TERM MAP (CMAP) CORRECTION <<<<<<<
+ TITLE> *>>>>>>>>>>>>>>>>>>>>>> DECEMBER, 2003 <<<<<<<<<<<<<<<<<<<<<<<<<<
+ TITLE> * ALL COMMENTS TO ADM JR. VIA THE CHARMM WEB SITE: WWW.CHARMM.ORG
+ TITLE> *               PARAMETER SET DISCUSSION FORUM
+ TITLE> *
+ PARMIO> NONBOND, HBOND lists and IMAGE atoms cleared.
+  
+ CHARMM>    close unit 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    prnlev 5
+  
+ CHARMM>    wrnlev 2
+  
+ CHARMM>     
+  
+ CHARMM>    open read card name cl.pdb unit 1
+ VOPEN> Attempting to open::cl.pdb::
+ OPNLGU> Unit  1 opened for READONLY access to cl.pdb
+  
+ CHARMM>    read sequence pdb unit 1
+ MAINIO> Sequence information being read from unit   1.
+ TITLE>  *
+
+          RESIDUE SEQUENCE --   103 RESIDUES
+          ALA ALA PRO THR VAL SER ILE PHE PRO PRO SER SER GLU GLN LEU THR SER GLY GLY ALA 
+          SER VAL VAL CYS PHE LEU ASN ASN PHE TYR PRO LYS ASP ILE ASN VAL LYS TRP LYS ILE 
+          ASP GLY SER GLU ARG GLN ASN GLY VAL LEU ASN SER TRP THR ASP GLN ASP SER LYS ASP 
+          SER THR TYR SER MET SER SER THR LEU THR LEU THR LYS ASP GLU TYR GLU ARG HSD ASN 
+          SER TYR THR CYS GLU ALA THR HSD LYS THR SER THR SER PRO ILE VAL LYS SER PHE ASN 
+          ARG ASN GLU 
+ ***** Message from SEQRDR ***** THE SYSTEM CONTAINS 23 TITRATABLE GROUPS
+ THE USER MUST PREDETERMINE THE PROTONATION STATE THROUGH THE SEQUENCE AND RTF
+ HIS -  0  ASP -  6  GLU -  6  LYS -  7  TYR -  4
+  
+ CHARMM>     
+  
+ CHARMM>    generate CL setup
+ THE PATCH 'NTER' WILL BE USED FOR THE FIRST RESIDUE
+ THE PATCH 'CTER' WILL BE USED FOR THE LAST  RESIDUE
+ GENPSF> Segment   1 has been generated. Its identifier is CL.
+ PSFSUM> PSF modified: NONBOND lists and IMAGE atoms cleared.
+ PSFSUM> Summary of the structure file counters :
+         Number of segments      =        1   Number of residues   =      103
+         Number of atoms         =     1574   Number of groups     =      479
+         Number of bonds         =     1592   Number of angles     =     2859
+         Number of dihedrals     =     4217   Number of impropers  =      276
+         Number of cross-terms   =      101
+         Number of HB acceptors  =      172   Number of HB donors  =      195
+         Number of NB exclusions =        0   Total charge =   -2.00000
+  
+ CHARMM>     
+  
+ CHARMM>    read coor pdb offset -111 unit 1
+  read CHARMM-pdb format
+          SPATIAL COORDINATES BEING READ FROM UNIT  1
+ A RESIDUE OFFSET OF-111 WILL BE USED.
+ TITLE>  *
+
+ ** WARNING ** For atom in coordinate file, the corresponding residue in the PSF lacks that atom:
+ INDEX=  887 IRES=    7 RESID=118  RES=ILE  ATOM=CD1 
+
+ ** WARNING ** For atom in coordinate file, the corresponding residue in the PSF lacks that atom:
+ INDEX= 1092 IRES=   34 RESID=145  RES=ILE  ATOM=CD1 
+
+ ** WARNING ** For atom in coordinate file, the corresponding residue in the PSF lacks that atom:
+ INDEX= 1147 IRES=   40 RESID=151  RES=ILE  ATOM=CD1 
+
+ ** WARNING ** For atom in coordinate file, the corresponding residue in the PSF lacks that atom:
+ INDEX= 1580 IRES=   95 RESID=206  RES=ILE  ATOM=CD1 
+
+ ** WARNING ** For atom in coordinate file, the corresponding residue in the PSF lacks that atom:
+ INDEX= 1644 IRES=  103 RESID=214  RES=GLU  ATOM=O   
+
+ ** WARNING ** For atom in coordinate file, the corresponding residue in the PSF lacks that atom:
+ INDEX= 1650 IRES=  103 RESID=214  RES=GLU  ATOM=OXT 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     2     1 ALA  HT1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     3     1 ALA  HT2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     4     1 ALA  HT3 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     6     1 ALA  HA  
+ ** WARNING ** After reading, there are no coordinates for selected atom:     8     1 ALA  HB1 
+ ** WARNING ** After reading, there are no coordinates for selected atom:     9     1 ALA  HB2 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    10     1 ALA  HB3 
+ ** WARNING ** After reading, there are no coordinates for selected atom:    14     2 ALA  HN  
+ ** WARNING ** After reading, there are no coordinates for selected atom:    16     2 ALA  HA  
+ ** WARNING ** After reading, there are no coordinates for selected atom:    18     2 ALA  HB1 
+
+ ** A total of   772 selected atoms have no coordinates
+
+ ** A total of    6 warnings were encountered during coordinate reading **
+ *** LEVEL  2 WARNING *** BOMLEV IS    0
+  
+ CHARMM>    close unit 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>    ! CL domain: residues 112-214
+ CHARMM>     
+  
+ CHARMM>    prnlev 6
+  
+ CHARMM>     
+  
+ CHARMM>    ! rename atoms to ensure pdb compatibility with charmm
+ CHARMM>     
+  
+ CHARMM>    rename atom cd1 select resname ile .and. type cd end
+ SELRPN>      4 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '118 ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '145 ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '151 ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+ FOR SEGMENT 'CL  ' RESIDUE '206 ', ATOM 'CD  ' IS RENAMED TO 'CD1 '
+  
+ CHARMM>    rename atom oxt select type ot1 end
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '214 ', ATOM 'OT1 ' IS RENAMED TO 'OXT '
+  
+ CHARMM>    rename atom o select ires ?nres .and. type ot2 end
+ RDCMND substituted energy or value "?NRES" to "103"
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '214 ', ATOM 'OT2 ' IS RENAMED TO 'O   '
+  
+ CHARMM>     
+  
+ CHARMM>    print coor sele type oxt end
+ SELRPN>      1 atoms have been selected out of   1574
+ NOTE: A SELECTED SUBSET OF ATOMS WILL BE USED
+
+
+          COORDINATE FILE MODULE
+ TITLE>  * NATIVE CONTACT DMAT PRINT OUT
+ TITLE>  *
+    1
+ 1573  103 GLU  OXT 9999.000009999.000009999.00000 CL   214    0.00000
+  
+ CHARMM>     
+  
+ CHARMM>    rename atom cd select resname ile .and. type cd1 end
+ SELRPN>      4 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '118 ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+ FOR SEGMENT 'CL  ' RESIDUE '145 ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+ FOR SEGMENT 'CL  ' RESIDUE '151 ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+ FOR SEGMENT 'CL  ' RESIDUE '206 ', ATOM 'CD1 ' IS RENAMED TO 'CD  '
+  
+ CHARMM>    rename atom ot1 select type oxt end
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '214 ', ATOM 'OXT ' IS RENAMED TO 'OT1 '
+  
+ CHARMM>    rename atom ot2 select ires ?nres .and. type o end
+ RDCMND substituted energy or value "?NRES" to "103"
+ SELRPN>      1 atoms have been selected out of   1574
+ FOR SEGMENT 'CL  ' RESIDUE '214 ', ATOM 'O   ' IS RENAMED TO 'OT2 '
+  
+ CHARMM>     
+  
+ CHARMM>    open write unit 9 card name cl-sasa.dat
+ VOPEN> Attempting to open::cl-sasa.dat::
+ OPNLGU> Unit  9 opened for WRITE access to cl-sasa.dat
+  
+ CHARMM>     
+  
+ CHARMM>    coor surface acce sele  all end
+ SELRPN>   1574 atoms have been selected out of   1574
+ SURFAC: Lennard-Jones radii values being used
+ SURFAC: RPRObe=   1.60000
+ SURFAC: Analytic surface area method used
+  
+ CHARMM>    set index 1
+ Parameter: INDEX <- "1"
+  
+ CHARMM>    write title unit 9
+ RDCMND: can not substitute energy "?SEGID"
+ RDTITL> *SOLVENT ACCESSIBLE SURFACE AREA FOR: ?SEGID
+ RDTITL>  
+  
+ CHARMM>     
+  
+ CHARMM>    label loop_res
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "1"
+ SELRPN>     12 atoms have been selected out of   1574
+ Statistics for   12 selected atoms:
+       minimum =    0.00000      maximum =    25.0717     weight =    12.0000    
+       average =    5.23457      variance=    9.28861     total  =    62.8149    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "62.8149"
+ Parameter: SAS1 <- "62.8149"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "1"
+ SELRPN>     12 atoms have been selected out of   1574
+ STATISTICS FOR         5 SELECTED ATOMS:
+    XMIN =  -12.361000 XMAX =   -9.932000 XAVE =  -11.151000
+    YMIN =   13.652000 YMAX =   15.820000 YAVE =   15.109400
+    ZMIN =    3.373000 ZMAX =    5.500000 ZAVE =    4.443200
+    WMIN =    0.000000 WMAX =   25.071733 WAVE =   12.562976
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ALA"
+ Parameter: NAME1 <- "ALA"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 1       62.8149      ALA
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "2"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "2" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "2"
+ SELRPN>     10 atoms have been selected out of   1574
+ Statistics for   10 selected atoms:
+       minimum =    0.00000      maximum =    48.4290     weight =    10.0000    
+       average =    6.28107      variance=    14.3555     total  =    62.8107    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "62.8107"
+ Parameter: SAS1 <- "62.8107"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "2"
+ SELRPN>     10 atoms have been selected out of   1574
+ STATISTICS FOR         5 SELECTED ATOMS:
+    XMIN =  -10.718000 XMAX =   -8.349000 XAVE =   -9.985600
+    YMIN =   13.513000 YMAX =   15.325000 YAVE =   14.502800
+    ZMIN =   -0.270000 ZMAX =    2.175000 ZAVE =    1.014000
+    WMIN =    0.000000 WMAX =   48.429014 WAVE =   12.562135
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ALA"
+ Parameter: NAME1 <- "ALA"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 2       62.8107      ALA
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "3"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "3" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "3"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    7.98308     weight =    14.0000    
+       average =   0.570220      variance=    2.05596     total  =    7.98308    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "7.98308"
+ Parameter: SAS1 <- "7.98308"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "3"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -11.038000 XMAX =   -7.717000 XAVE =   -9.399571
+    YMIN =    9.943000 YMAX =   12.243000 YAVE =   11.229571
+    ZMIN =   -1.737000 ZMAX =    0.559000 ZAVE =   -0.087000
+    WMIN =    0.000000 WMAX =    7.983077 WAVE =    1.140440
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PRO"
+ Parameter: NAME1 <- "PRO"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 3       7.98308      PRO
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "4"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "4" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "4"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    51.4769     weight =    14.0000    
+       average =    6.54530      variance=    14.8776     total  =    91.6342    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "91.6342"
+ Parameter: SAS1 <- "91.6342"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "4"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -6.441000 XMAX =   -3.076000 XAVE =   -4.717571
+    YMIN =    9.096000 YMAX =   13.300000 YAVE =   11.222143
+    ZMIN =   -1.917000 ZMAX =   -0.382000 ZAVE =   -1.131857
+    WMIN =    0.000000 WMAX =   51.476944 WAVE =   13.090598
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 4       91.6342      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "5"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "5" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "5"
+ SELRPN>     16 atoms have been selected out of   1574
+ Statistics for   16 selected atoms:
+       minimum =    0.00000      maximum =    3.67177     weight =    16.0000    
+       average =   0.329098      variance=   0.945027     total  =    5.26557    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "5.26557"
+ Parameter: SAS1 <- "5.26557"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "5"
+ SELRPN>     16 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -7.747000 XMAX =   -3.589000 XAVE =   -5.556714
+    YMIN =    6.098000 YMAX =    9.458000 YAVE =    7.944571
+    ZMIN =   -5.143000 ZMAX =   -3.022000 ZAVE =   -4.027571
+    WMIN =    0.000000 WMAX =    3.671767 WAVE =    0.752225
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "VAL"
+ Parameter: NAME1 <- "VAL"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 5       5.26557      VAL
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "6"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "6" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "6"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    30.6297     weight =    11.0000    
+       average =    3.42069      variance=    8.70721     total  =    37.6275    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "37.6275"
+ Parameter: SAS1 <- "37.6275"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "6"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -3.467000 XMAX =   -0.745000 XAVE =   -2.045833
+    YMIN =    3.860000 YMAX =    7.810000 YAVE =    5.924333
+    ZMIN =   -5.164000 ZMAX =   -4.003000 ZAVE =   -4.425167
+    WMIN =    0.000000 WMAX =   30.629669 WAVE =    6.271257
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 6       37.6275      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "7"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "7" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "7"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    11.9473     weight =    19.0000    
+       average =    1.09245      variance=    3.16207     total  =    20.7565    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "20.7565"
+ Parameter: SAS1 <- "20.7565"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "7"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -3.039000 XMAX =    0.096000 XAVE =   -1.862143
+    YMIN =    1.144000 YMAX =    4.324000 YAVE =    2.886714
+    ZMIN =   -9.243000 ZMAX =   -6.422000 ZAVE =   -7.658286
+    WMIN =    0.000000 WMAX =   11.947288 WAVE =    2.965216
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   12 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ILE"
+ Parameter: NAME1 <- "ILE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 7       20.7565      ILE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "8"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "8" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "8"
+ SELRPN>     20 atoms have been selected out of   1574
+ Statistics for   20 selected atoms:
+       minimum =    0.00000      maximum =    42.1745     weight =    20.0000    
+       average =    5.21476      variance=    11.3049     total  =    104.295    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "104.295"
+ Parameter: SAS1 <- "104.295"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "8"
+ SELRPN>     20 atoms have been selected out of   1574
+ STATISTICS FOR        11 SELECTED ATOMS:
+    XMIN =   -0.184000 XMAX =    3.357000 XAVE =    1.731636
+    YMIN =   -1.411000 YMAX =    4.918000 YAVE =    2.136727
+    ZMIN =   -7.393000 ZMAX =   -3.395000 ZAVE =   -5.375727
+    WMIN =    0.000000 WMAX =   42.174498 WAVE =    9.481387
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PHE"
+ Parameter: NAME1 <- "PHE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 8       104.295      PHE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "9"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "9" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "9"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    30.8553     weight =    14.0000    
+       average =    4.71380      variance=    8.75594     total  =    65.9933    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "65.9933"
+ Parameter: SAS1 <- "65.9933"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "9"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =    1.550000 XMAX =    3.631000 XAVE =    2.200571
+    YMIN =   -2.828000 YMAX =    0.515000 YAVE =   -1.275286
+    ZMIN =  -10.922000 ZMAX =   -7.983000 ZAVE =   -9.426571
+    WMIN =    0.000000 WMAX =   30.855263 WAVE =    9.427608
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PRO"
+ Parameter: NAME1 <- "PRO"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 9       65.9933      PRO
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "10"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "10" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "10"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    15.4672     weight =    14.0000    
+       average =    1.20584      variance=    3.97202     total  =    16.8818    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "16.8818"
+ Parameter: SAS1 <- "16.8818"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "10"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =    1.706000 XMAX =    5.372000 XAVE =    3.370286
+    YMIN =   -6.470000 YMAX =   -4.183000 YAVE =   -5.179143
+    ZMIN =   -9.712000 ZMAX =   -8.155000 ZAVE =   -9.000429
+    WMIN =    0.000000 WMAX =   15.467168 WAVE =    2.411684
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PRO"
+ Parameter: NAME1 <- "PRO"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 10       16.8818      PRO
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "11"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "11" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "11"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    39.2237     weight =    11.0000    
+       average =    5.78244      variance=    11.4682     total  =    63.6068    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "63.6068"
+ Parameter: SAS1 <- "63.6068"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "11"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =    5.928000 XMAX =    8.129000 XAVE =    7.464500
+    YMIN =   -7.012000 YMAX =   -4.627000 YAVE =   -5.512333
+    ZMIN =   -8.496000 ZMAX =   -5.692000 ZAVE =   -7.344167
+    WMIN =    0.000000 WMAX =   39.223670 WAVE =   10.601134
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 11       63.6068      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "12"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "12" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "12"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    53.1281     weight =    11.0000    
+       average =    8.30140      variance=    16.9422     total  =    91.3154    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "91.3154"
+ Parameter: SAS1 <- "91.3154"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "12"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =    8.915000 XMAX =   11.569000 XAVE =   10.051000
+    YMIN =   -9.084000 YMAX =   -5.702000 YAVE =   -6.921333
+    ZMIN =  -11.082000 ZMAX =   -9.209000 ZAVE =   -9.936000
+    WMIN =    0.000000 WMAX =   53.128121 WAVE =   15.219227
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 12       91.3154      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "13"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "13" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "13"
+ SELRPN>     15 atoms have been selected out of   1574
+ Statistics for   15 selected atoms:
+       minimum =    0.00000      maximum =    50.5993     weight =    15.0000    
+       average =    10.2062      variance=    16.0961     total  =    153.092    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "153.092"
+ Parameter: SAS1 <- "153.092"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "13"
+ SELRPN>     15 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =   10.015000 XMAX =   13.423000 XAVE =   11.737000
+    YMIN =  -10.638000 YMAX =   -4.495000 YAVE =   -7.418333
+    ZMIN =   -8.084000 ZMAX =   -4.321000 ZAVE =   -6.300778
+    WMIN =    0.000000 WMAX =   50.599333 WAVE =   17.010253
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLU"
+ Parameter: NAME1 <- "GLU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 13       153.092      GLU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "14"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "14" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "14"
+ SELRPN>     17 atoms have been selected out of   1574
+ Statistics for   17 selected atoms:
+       minimum =    0.00000      maximum =    22.8903     weight =    17.0000    
+       average =    3.28928      variance=    5.95051     total  =    55.9177    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "55.9177"
+ Parameter: SAS1 <- "55.9177"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "14"
+ SELRPN>     17 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =    3.500000 XMAX =    8.848000 XAVE =    6.116556
+    YMIN =  -11.927000 YMAX =   -7.967000 YAVE =   -9.646889
+    ZMIN =   -7.082000 ZMAX =   -3.630000 ZAVE =   -5.525222
+    WMIN =    0.000000 WMAX =   22.890314 WAVE =    6.213081
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    8 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLN"
+ Parameter: NAME1 <- "GLN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 14       55.9177      GLN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "15"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "15" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "15"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    12.6609     weight =    19.0000    
+       average =   0.922974      variance=    2.91558     total  =    17.5365    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "17.5365"
+ Parameter: SAS1 <- "17.5365"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "15"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =    4.451000 XMAX =    7.833000 XAVE =    6.523750
+    YMIN =  -13.376000 YMAX =   -8.237000 YAVE =  -10.604000
+    ZMIN =  -11.152000 ZMAX =   -8.324000 ZAVE =  -10.066625
+    WMIN =    0.000000 WMAX =   12.660921 WAVE =    2.192064
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   11 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LEU"
+ Parameter: NAME1 <- "LEU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 15       17.5365      LEU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "16"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "16" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "16"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    68.3022     weight =    14.0000    
+       average =    9.48956      variance=    18.3496     total  =    132.854    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "132.854"
+ Parameter: SAS1 <- "132.854"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "16"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =    9.132000 XMAX =   12.527000 XAVE =   10.736571
+    YMIN =  -15.209000 YMAX =  -11.278000 YAVE =  -13.096000
+    ZMIN =  -10.181000 ZMAX =   -8.674000 ZAVE =   -9.506286
+    WMIN =    0.000000 WMAX =   68.302216 WAVE =   18.979115
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 16       132.854      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "17"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "17" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "17"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    37.7125     weight =    11.0000    
+       average =    10.1051      variance=    14.4942     total  =    111.156    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "111.156"
+ Parameter: SAS1 <- "111.156"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "17"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =    7.098000 XMAX =    9.473000 XAVE =    8.323500
+    YMIN =  -16.616000 YMAX =  -13.377000 YAVE =  -14.699500
+    ZMIN =   -7.681000 ZMAX =   -4.858000 ZAVE =   -6.370500
+    WMIN =    0.000000 WMAX =   37.712544 WAVE =   18.526029
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 17       111.156      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "18"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "18" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "18"
+ SELRPN>      7 atoms have been selected out of   1574
+ Statistics for    7 selected atoms:
+       minimum =    0.00000      maximum =    21.3021     weight =    7.00000    
+       average =    4.77138      variance=    7.62852     total  =    33.3996    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "33.3996"
+ Parameter: SAS1 <- "33.3996"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "18"
+ SELRPN>      7 atoms have been selected out of   1574
+ STATISTICS FOR         4 SELECTED ATOMS:
+    XMIN =    3.126000 XMAX =    6.655000 XAVE =    4.855750
+    YMIN =  -15.701000 YMAX =  -14.944000 YAVE =  -15.327250
+    ZMIN =   -8.519000 ZMAX =   -7.892000 ZAVE =   -8.105750
+    WMIN =    0.000000 WMAX =   21.302141 WAVE =    8.349909
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    3 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLY"
+ Parameter: NAME1 <- "GLY"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 18       33.3996      GLY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "19"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "19" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "19"
+ SELRPN>      7 atoms have been selected out of   1574
+ Statistics for    7 selected atoms:
+       minimum =    0.00000      maximum =    18.1206     weight =    7.00000    
+       average =    2.58866      variance=    6.34091     total  =    18.1206    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "18.1206"
+ Parameter: SAS1 <- "18.1206"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "19"
+ SELRPN>      7 atoms have been selected out of   1574
+ STATISTICS FOR         4 SELECTED ATOMS:
+    XMIN =    3.039000 XMAX =    4.290000 XAVE =    3.628000
+    YMIN =  -13.914000 YMAX =  -11.308000 YAVE =  -12.603500
+    ZMIN =   -7.537000 ZMAX =   -6.629000 ZAVE =   -7.145000
+    WMIN =    0.000000 WMAX =   18.120647 WAVE =    4.530162
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    3 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLY"
+ Parameter: NAME1 <- "GLY"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 19       18.1206      GLY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "20"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "20" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "20"
+ SELRPN>     10 atoms have been selected out of   1574
+ Statistics for   10 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    10.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "20"
+ SELRPN>     10 atoms have been selected out of   1574
+ STATISTICS FOR         5 SELECTED ATOMS:
+    XMIN =   -0.538000 XMAX =    1.836000 XAVE =    0.952400
+    YMIN =  -11.350000 YMAX =   -9.317000 YAVE =  -10.060200
+    ZMIN =   -9.170000 ZMAX =   -6.813000 ZAVE =   -7.563400
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ALA"
+ Parameter: NAME1 <- "ALA"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 20       0      ALA
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "21"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "21" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "21"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    8.74538     weight =    11.0000    
+       average =    1.72352      variance=    3.33553     total  =    18.9587    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "18.9587"
+ Parameter: SAS1 <- "18.9587"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "21"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =    0.035000 XMAX =    1.133000 XAVE =    0.649333
+    YMIN =   -8.888000 YMAX =   -5.502000 YAVE =   -7.406333
+    ZMIN =   -5.965000 ZMAX =   -2.962000 ZAVE =   -4.782333
+    WMIN =    0.000000 WMAX =    8.745377 WAVE =    3.159782
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 21       18.9587      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "22"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "22" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "22"
+ SELRPN>     16 atoms have been selected out of   1574
+ Statistics for   16 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    16.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "22"
+ SELRPN>     16 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -2.820000 XMAX =   -1.207000 XAVE =   -2.128429
+    YMIN =   -5.944000 YMAX =   -3.225000 YAVE =   -4.588571
+    ZMIN =   -8.274000 ZMAX =   -4.291000 ZAVE =   -6.417714
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "VAL"
+ Parameter: NAME1 <- "VAL"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 22       0      VAL
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "23"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "23" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "23"
+ SELRPN>     16 atoms have been selected out of   1574
+ Statistics for   16 selected atoms:
+       minimum =    0.00000      maximum =    24.4896     weight =    16.0000    
+       average =    2.05041      variance=    5.96038     total  =    32.8066    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "32.8066"
+ Parameter: SAS1 <- "32.8066"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "23"
+ SELRPN>     16 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -1.946000 XMAX =    0.196000 XAVE =   -0.854143
+    YMIN =   -3.168000 YMAX =    0.085000 YAVE =   -1.595857
+    ZMIN =   -4.716000 ZMAX =   -1.725000 ZAVE =   -3.303571
+    WMIN =    0.000000 WMAX =   24.489571 WAVE =    4.686653
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "VAL"
+ Parameter: NAME1 <- "VAL"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 23       32.8066      VAL
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "24"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "24" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "24"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    11.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "24"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -5.639000 XMAX =   -2.937000 XAVE =   -4.170333
+    YMIN =   -0.271000 YMAX =    2.580000 YAVE =    1.210500
+    ZMIN =   -3.796000 ZMAX =   -0.788000 ZAVE =   -2.667500
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "CYS"
+ Parameter: NAME1 <- "CYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 24       0      CYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "25"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "25" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "25"
+ SELRPN>     20 atoms have been selected out of   1574
+ Statistics for   20 selected atoms:
+       minimum =    0.00000      maximum =    32.5611     weight =    20.0000    
+       average =    4.15801      variance=    9.02336     total  =    83.1602    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "83.1602"
+ Parameter: SAS1 <- "83.1602"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "25"
+ SELRPN>     20 atoms have been selected out of   1574
+ STATISTICS FOR        11 SELECTED ATOMS:
+    XMIN =   -4.230000 XMAX =    1.445000 XAVE =   -1.395909
+    YMIN =    1.502000 YMAX =    5.882000 YAVE =    3.339636
+    ZMIN =   -1.645000 ZMAX =    1.679000 ZAVE =    0.029273
+    WMIN =    0.000000 WMAX =   32.561143 WAVE =    7.560015
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PHE"
+ Parameter: NAME1 <- "PHE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 25       83.1602      PHE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "26"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "26" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "26"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    19.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "26"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -8.364000 XMAX =   -5.278000 XAVE =   -6.915500
+    YMIN =    3.346000 YMAX =    6.756000 YAVE =    5.379625
+    ZMIN =   -1.684000 ZMAX =    2.903000 ZAVE =    0.475875
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   11 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LEU"
+ Parameter: NAME1 <- "LEU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 26       0      LEU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "27"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "27" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "27"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    46.4400     weight =    14.0000    
+       average =    3.56528      variance=    11.9159     total  =    49.9139    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "49.9139"
+ Parameter: SAS1 <- "49.9139"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "27"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -5.503000 XMAX =   -1.017000 XAVE =   -3.719250
+    YMIN =    6.417000 YMAX =   10.754000 YAVE =    8.400375
+    ZMIN =    1.613000 ZMAX =    3.137000 ZAVE =    2.416625
+    WMIN =    0.000000 WMAX =   46.439975 WAVE =    6.239234
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 27       49.9139      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "28"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "28" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "28"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    45.4524     weight =    14.0000    
+       average =    5.00937      variance=    11.8445     total  =    70.1311    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "70.1311"
+ Parameter: SAS1 <- "70.1311"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "28"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -7.087000 XMAX =   -2.125000 XAVE =   -4.709250
+    YMIN =   10.112000 YMAX =   12.966000 YAVE =   11.780625
+    ZMIN =    4.244000 ZMAX =    6.426000 ZAVE =    5.018500
+    WMIN =    0.000000 WMAX =   45.452405 WAVE =    8.766392
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 28       70.1311      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "29"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "29" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "29"
+ SELRPN>     20 atoms have been selected out of   1574
+ Statistics for   20 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    20.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "29"
+ SELRPN>     20 atoms have been selected out of   1574
+ STATISTICS FOR        11 SELECTED ATOMS:
+    XMIN =  -11.126000 XMAX =   -7.991000 XAVE =   -9.692818
+    YMIN =    6.404000 YMAX =   11.575000 YAVE =    9.292545
+    ZMIN =    3.980000 ZMAX =    7.303000 ZAVE =    5.167909
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PHE"
+ Parameter: NAME1 <- "PHE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 29       0      PHE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "30"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "30" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "30"
+ SELRPN>     21 atoms have been selected out of   1574
+ Statistics for   21 selected atoms:
+       minimum =    0.00000      maximum =    61.8783     weight =    21.0000    
+       average =    6.14047      variance=    14.5435     total  =    128.950    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "128.95"
+ Parameter: SAS1 <- "128.95"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "30"
+ SELRPN>     21 atoms have been selected out of   1574
+ STATISTICS FOR        12 SELECTED ATOMS:
+    XMIN =  -15.043000 XMAX =  -11.151000 XAVE =  -13.101250
+    YMIN =   10.668000 YMAX =   14.712000 YAVE =   13.230167
+    ZMIN =    6.473000 ZMAX =   12.799000 ZAVE =    9.607000
+    WMIN =    0.000000 WMAX =   61.878252 WAVE =   10.745819
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "TYR"
+ Parameter: NAME1 <- "TYR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 30       128.95      TYR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "31"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "31" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "31"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    10.8028     weight =    14.0000    
+       average =    2.18572      variance=    4.20057     total  =    30.6001    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "30.6001"
+ Parameter: SAS1 <- "30.6001"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "31"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -16.273000 XMAX =  -14.073000 XAVE =  -15.035000
+    YMIN =    8.896000 YMAX =   12.628000 YAVE =   11.018857
+    ZMIN =    5.929000 ZMAX =    7.767000 ZAVE =    6.892143
+    WMIN =    0.000000 WMAX =   10.802773 WAVE =    4.371441
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PRO"
+ Parameter: NAME1 <- "PRO"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 31       30.6001      PRO
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "32"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "32" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "32"
+ SELRPN>     22 atoms have been selected out of   1574
+ Statistics for   22 selected atoms:
+       minimum =    0.00000      maximum =    59.9691     weight =    22.0000    
+       average =    4.89042      variance=    13.1982     total  =    107.589    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "107.589"
+ Parameter: SAS1 <- "107.589"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "32"
+ SELRPN>     22 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -14.361000 XMAX =  -12.554000 XAVE =  -13.521556
+    YMIN =    2.495000 YMAX =    8.799000 YAVE =    5.615667
+    ZMIN =    6.850000 ZMAX =   12.397000 ZAVE =    9.531000
+    WMIN =    0.000000 WMAX =   59.969113 WAVE =   11.954367
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LYS"
+ Parameter: NAME1 <- "LYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 32       107.589      LYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "33"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "33" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "33"
+ SELRPN>     12 atoms have been selected out of   1574
+ Statistics for   12 selected atoms:
+       minimum =    0.00000      maximum =    51.0033     weight =    12.0000    
+       average =    9.87517      variance=    17.9408     total  =    118.502    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "118.502"
+ Parameter: SAS1 <- "118.502"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "33"
+ SELRPN>     12 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =  -18.835000 XMAX =  -15.664000 XAVE =  -17.265125
+    YMIN =    3.834000 YMAX =    7.181000 YAVE =    5.770500
+    ZMIN =    4.417000 ZMAX =    8.681000 ZAVE =    6.635250
+    WMIN =    0.000000 WMAX =   51.003284 WAVE =   14.812759
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    4 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASP"
+ Parameter: NAME1 <- "ASP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 33       118.502      ASP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "34"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "34" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "34"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    13.6025     weight =    19.0000    
+       average =   0.789934      variance=    3.02794     total  =    15.0087    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "15.0087"
+ Parameter: SAS1 <- "15.0087"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "34"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -15.406000 XMAX =  -12.523000 XAVE =  -14.183000
+    YMIN =    2.950000 YMAX =    5.600000 YAVE =    4.631143
+    ZMIN =    1.490000 ZMAX =    4.363000 ZAVE =    2.934429
+    WMIN =    0.000000 WMAX =   13.602492 WAVE =    2.144106
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   12 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ILE"
+ Parameter: NAME1 <- "ILE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 34       15.0087      ILE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "35"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "35" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "35"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    48.1182     weight =    14.0000    
+       average =    5.73746      variance=    12.5453     total  =    80.3245    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "80.3245"
+ Parameter: SAS1 <- "80.3245"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "35"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =  -18.404000 XMAX =  -14.553000 XAVE =  -16.427000
+    YMIN =    0.963000 YMAX =    3.964000 YAVE =    2.411125
+    ZMIN =   -1.768000 ZMAX =    1.004000 ZAVE =   -0.401250
+    WMIN =    0.000000 WMAX =   48.118166 WAVE =   10.040557
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 35       80.3245      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "36"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "36" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "36"
+ SELRPN>     16 atoms have been selected out of   1574
+ Statistics for   16 selected atoms:
+       minimum =    0.00000      maximum =    20.4873     weight =    16.0000    
+       average =    1.48730      variance=    4.94677     total  =    23.7967    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "23.7967"
+ Parameter: SAS1 <- "23.7967"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "36"
+ SELRPN>     16 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -14.140000 XMAX =  -10.571000 XAVE =  -12.604429
+    YMIN =   -1.053000 YMAX =    1.806000 YAVE =    0.613143
+    ZMIN =   -2.685000 ZMAX =   -0.190000 ZAVE =   -1.566143
+    WMIN =    0.000000 WMAX =   20.487313 WAVE =    3.399535
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "VAL"
+ Parameter: NAME1 <- "VAL"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 36       23.7967      VAL
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "37"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "37" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "37"
+ SELRPN>     22 atoms have been selected out of   1574
+ Statistics for   22 selected atoms:
+       minimum =    0.00000      maximum =    36.8975     weight =    22.0000    
+       average =    3.38563      variance=    9.54293     total  =    74.4838    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "74.4838"
+ Parameter: SAS1 <- "74.4838"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "37"
+ SELRPN>     22 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -18.980000 XMAX =  -11.659000 XAVE =  -15.202111
+    YMIN =   -1.696000 YMAX =    0.005000 YAVE =   -0.751667
+    ZMIN =   -6.515000 ZMAX =   -3.988000 ZAVE =   -5.531444
+    WMIN =    0.000000 WMAX =   36.897451 WAVE =    8.275980
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LYS"
+ Parameter: NAME1 <- "LYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 37       74.4838      LYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "38"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "38" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "38"
+ SELRPN>     24 atoms have been selected out of   1574
+ Statistics for   24 selected atoms:
+       minimum =    0.00000      maximum =   1.102471E-02 weight =    24.0000    
+       average =   4.628194E-04  variance=   2.202369E-03 total  =   1.110767E-02
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "1.110767E-02"
+ Parameter: SAS1 <- "1.110767E-02"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "38"
+ SELRPN>     24 atoms have been selected out of   1574
+ STATISTICS FOR        14 SELECTED ATOMS:
+    XMIN =  -12.821000 XMAX =   -5.578000 XAVE =   -9.049214
+    YMIN =   -4.043000 YMAX =   -1.898000 YAVE =   -3.001857
+    ZMIN =   -8.741000 ZMAX =   -3.725000 ZAVE =   -6.163643
+    WMIN =    0.000000 WMAX =    0.011025 WAVE =    0.000793
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   10 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "TRP"
+ Parameter: NAME1 <- "TRP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 38       1.110767E-02      TRP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "39"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "39" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "39"
+ SELRPN>     22 atoms have been selected out of   1574
+ Statistics for   22 selected atoms:
+       minimum =    0.00000      maximum =    44.9281     weight =    22.0000    
+       average =    2.73807      variance=    9.46314     total  =    60.2376    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "60.2376"
+ Parameter: SAS1 <- "60.2376"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "39"
+ SELRPN>     22 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -14.638000 XMAX =   -9.773000 XAVE =  -12.544000
+    YMIN =   -3.692000 YMAX =    1.594000 YAVE =   -1.610222
+    ZMIN =  -13.192000 ZMAX =   -9.690000 ZAVE =  -11.685556
+    WMIN =    0.000000 WMAX =   44.928130 WAVE =    6.693062
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LYS"
+ Parameter: NAME1 <- "LYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 39       60.2376      LYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "40"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "40" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "40"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    3.12794     weight =    19.0000    
+       average =   0.287443      variance=   0.847884     total  =    5.46141    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "5.46141"
+ Parameter: SAS1 <- "5.46141"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "40"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -11.386000 XMAX =   -8.497000 XAVE =   -9.919286
+    YMIN =   -7.575000 YMAX =   -4.983000 YAVE =   -6.331714
+    ZMIN =  -14.766000 ZMAX =  -11.310000 ZAVE =  -13.176857
+    WMIN =    0.000000 WMAX =    3.127941 WAVE =    0.780201
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   12 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ILE"
+ Parameter: NAME1 <- "ILE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 40       5.46141      ILE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "41"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "41" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "41"
+ SELRPN>     12 atoms have been selected out of   1574
+ Statistics for   12 selected atoms:
+       minimum =    0.00000      maximum =    22.6213     weight =    12.0000    
+       average =    6.11406      variance=    8.03239     total  =    73.3688    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "73.3688"
+ Parameter: SAS1 <- "73.3688"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "41"
+ SELRPN>     12 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =  -12.692000 XMAX =   -7.900000 XAVE =   -9.975625
+    YMIN =   -6.766000 YMAX =   -4.323000 YAVE =   -5.238000
+    ZMIN =  -18.799000 ZMAX =  -15.351000 ZAVE =  -17.342875
+    WMIN =    0.000000 WMAX =   22.621263 WAVE =    9.171096
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    4 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASP"
+ Parameter: NAME1 <- "ASP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 41       73.3688      ASP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "42"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "42" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "42"
+ SELRPN>      7 atoms have been selected out of   1574
+ Statistics for    7 selected atoms:
+       minimum =    0.00000      maximum =    31.1006     weight =    7.00000    
+       average =    8.01856      variance=    11.8294     total  =    56.1299    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "56.1299"
+ Parameter: SAS1 <- "56.1299"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "42"
+ SELRPN>      7 atoms have been selected out of   1574
+ STATISTICS FOR         4 SELECTED ATOMS:
+    XMIN =  -15.532000 XMAX =  -12.200000 XAVE =  -13.950000
+    YMIN =   -3.662000 YMAX =   -2.831000 YAVE =   -3.232250
+    ZMIN =  -15.944000 ZMAX =  -14.560000 ZAVE =  -15.324000
+    WMIN =    1.235496 WMAX =   31.100600 WAVE =   14.032483
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    3 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLY"
+ Parameter: NAME1 <- "GLY"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 42       56.1299      GLY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "43"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "43" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "43"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    49.0899     weight =    11.0000    
+       average =    7.60499      variance=    15.4259     total  =    83.6548    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "83.6548"
+ Parameter: SAS1 <- "83.6548"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "43"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =  -15.561000 XMAX =  -13.641000 XAVE =  -14.697333
+    YMIN =   -7.992000 YMAX =   -4.926000 YAVE =   -6.142167
+    ZMIN =  -14.712000 ZMAX =  -12.078000 ZAVE =  -13.573167
+    WMIN =    0.000000 WMAX =   49.089893 WAVE =   13.942474
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 43       83.6548      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "44"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "44" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "44"
+ SELRPN>     15 atoms have been selected out of   1574
+ Statistics for   15 selected atoms:
+       minimum =    0.00000      maximum =    25.2533     weight =    15.0000    
+       average =    5.48558      variance=    8.89289     total  =    82.2837    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "82.2837"
+ Parameter: SAS1 <- "82.2837"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "44"
+ SELRPN>     15 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -18.792000 XMAX =  -15.022000 XAVE =  -16.717000
+    YMIN =   -7.864000 YMAX =   -3.676000 YAVE =   -5.402556
+    ZMIN =  -11.572000 ZMAX =   -6.127000 ZAVE =   -8.895111
+    WMIN =    0.000000 WMAX =   25.253329 WAVE =    9.142635
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLU"
+ Parameter: NAME1 <- "GLU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 44       82.2837      GLU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "45"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "45" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "45"
+ SELRPN>     24 atoms have been selected out of   1574
+ Statistics for   24 selected atoms:
+       minimum =    0.00000      maximum =    20.6835     weight =    24.0000    
+       average =    2.30285      variance=    5.63036     total  =    55.2685    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "55.2685"
+ Parameter: SAS1 <- "55.2685"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "45"
+ SELRPN>     24 atoms have been selected out of   1574
+ STATISTICS FOR        11 SELECTED ATOMS:
+    XMIN =  -14.087000 XMAX =   -8.866000 XAVE =  -11.474182
+    YMIN =  -12.622000 YMAX =   -6.646000 YAVE =   -9.289818
+    ZMIN =   -9.552000 ZMAX =   -5.928000 ZAVE =   -7.887818
+    WMIN =    0.000000 WMAX =   20.683463 WAVE =    5.024409
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ARG"
+ Parameter: NAME1 <- "ARG"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 45       55.2685      ARG
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "46"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "46" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "46"
+ SELRPN>     17 atoms have been selected out of   1574
+ Statistics for   17 selected atoms:
+       minimum =    0.00000      maximum =    58.6742     weight =    17.0000    
+       average =    8.34132      variance=    15.7966     total  =    141.803    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "141.803"
+ Parameter: SAS1 <- "141.803"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "46"
+ SELRPN>     17 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -18.991000 XMAX =  -12.547000 XAVE =  -15.726000
+    YMIN =   -9.657000 YMAX =   -8.008000 YAVE =   -8.810556
+    ZMIN =   -5.975000 ZMAX =   -2.904000 ZAVE =   -4.479111
+    WMIN =    0.243091 WMAX =   58.674162 WAVE =   15.755834
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    8 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLN"
+ Parameter: NAME1 <- "GLN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 46       141.803      GLN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "47"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "47" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "47"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    49.1480     weight =    14.0000    
+       average =    9.40745      variance=    17.0955     total  =    131.704    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "131.704"
+ Parameter: SAS1 <- "131.704"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "47"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =  -14.672000 XMAX =  -10.169000 XAVE =  -12.694625
+    YMIN =  -13.920000 YMAX =  -10.723000 YAVE =  -12.372875
+    ZMIN =   -5.220000 ZMAX =   -3.019000 ZAVE =   -4.158875
+    WMIN =    0.000000 WMAX =   49.148034 WAVE =   16.463038
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 47       131.704      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "48"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "48" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "48"
+ SELRPN>      7 atoms have been selected out of   1574
+ Statistics for    7 selected atoms:
+       minimum =    0.00000      maximum =    24.5601     weight =    7.00000    
+       average =    4.79744      variance=    8.64662     total  =    33.5821    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "33.5821"
+ Parameter: SAS1 <- "33.5821"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "48"
+ SELRPN>      7 atoms have been selected out of   1574
+ STATISTICS FOR         4 SELECTED ATOMS:
+    XMIN =  -10.010000 XMAX =   -7.059000 XAVE =   -8.465000
+    YMIN =  -11.598000 YMAX =   -9.529000 YAVE =  -10.603750
+    ZMIN =   -2.647000 ZMAX =   -2.187000 ZAVE =   -2.421250
+    WMIN =    0.000000 WMAX =   24.560071 WAVE =    8.395520
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    3 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLY"
+ Parameter: NAME1 <- "GLY"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 48       33.5821      GLY
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "49"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "49" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "49"
+ SELRPN>     16 atoms have been selected out of   1574
+ Statistics for   16 selected atoms:
+       minimum =    0.00000      maximum =    19.4203     weight =    16.0000    
+       average =    1.91383      variance=    4.94940     total  =    30.6213    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "30.6213"
+ Parameter: SAS1 <- "30.6213"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "49"
+ SELRPN>     16 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -10.329000 XMAX =   -8.741000 XAVE =   -9.493286
+    YMIN =   -9.177000 YMAX =   -5.501000 YAVE =   -7.534000
+    ZMIN =   -3.191000 ZMAX =    0.882000 ZAVE =   -1.203143
+    WMIN =    0.000000 WMAX =   19.420311 WAVE =    4.374472
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "VAL"
+ Parameter: NAME1 <- "VAL"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 49       30.6213      VAL
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "50"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "50" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "50"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    60.2844     weight =    19.0000    
+       average =    6.64857      variance=    15.6411     total  =    126.323    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "126.323"
+ Parameter: SAS1 <- "126.323"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "50"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -7.636000 XMAX =   -4.914000 XAVE =   -6.647250
+    YMIN =  -10.014000 YMAX =   -5.003000 YAVE =   -7.788625
+    ZMIN =    0.626000 ZMAX =    3.122000 ZAVE =    2.226000
+    WMIN =    0.000000 WMAX =   60.284405 WAVE =   15.790354
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   11 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LEU"
+ Parameter: NAME1 <- "LEU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 50       126.323      LEU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "51"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "51" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "51"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    32.3219     weight =    14.0000    
+       average =    5.32834      variance=    10.7339     total  =    74.5968    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "74.5968"
+ Parameter: SAS1 <- "74.5968"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "51"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =  -11.006000 XMAX =   -7.274000 XAVE =   -8.670500
+    YMIN =   -5.296000 YMAX =   -3.207000 YAVE =   -3.897875
+    ZMIN =    1.314000 ZMAX =    6.084000 ZAVE =    3.553625
+    WMIN =    0.000000 WMAX =   32.321911 WAVE =    9.324602
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 51       74.5968      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "52"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "52" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "52"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    36.5160     weight =    11.0000    
+       average =    6.33015      variance=    12.1703     total  =    69.6316    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "69.6316"
+ Parameter: SAS1 <- "69.6316"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "52"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -6.768000 XMAX =   -4.207000 XAVE =   -5.720667
+    YMIN =   -2.567000 YMAX =    0.108000 YAVE =   -1.678333
+    ZMIN =    5.498000 ZMAX =    8.125000 ZAVE =    6.733000
+    WMIN =    0.000000 WMAX =   36.516022 WAVE =   11.605270
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 52       69.6316      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "53"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "53" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "53"
+ SELRPN>     24 atoms have been selected out of   1574
+ Statistics for   24 selected atoms:
+       minimum =    0.00000      maximum =    25.4285     weight =    24.0000    
+       average =    3.57312      variance=    7.06105     total  =    85.7548    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "85.7548"
+ Parameter: SAS1 <- "85.7548"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "53"
+ SELRPN>     24 atoms have been selected out of   1574
+ STATISTICS FOR        14 SELECTED ATOMS:
+    XMIN =  -12.173000 XMAX =   -5.476000 XAVE =   -9.399143
+    YMIN =   -0.370000 YMAX =    3.943000 YAVE =    1.426929
+    ZMIN =    5.728000 ZMAX =   10.381000 ZAVE =    7.708071
+    WMIN =    0.000000 WMAX =   25.428510 WAVE =    6.125342
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   10 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "TRP"
+ Parameter: NAME1 <- "TRP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 53       85.7548      TRP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "54"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "54" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "54"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    43.8837     weight =    14.0000    
+       average =    4.89389      variance=    11.6883     total  =    68.5145    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "68.5145"
+ Parameter: SAS1 <- "68.5145"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "54"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -7.219000 XMAX =   -3.255000 XAVE =   -5.252571
+    YMIN =    2.747000 YMAX =    5.519000 YAVE =    4.060571
+    ZMIN =    9.371000 ZMAX =   11.935000 ZAVE =   10.582000
+    WMIN =    0.000000 WMAX =   43.883651 WAVE =    9.787786
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 54       68.5145      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "55"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "55" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "55"
+ SELRPN>     12 atoms have been selected out of   1574
+ Statistics for   12 selected atoms:
+       minimum =    0.00000      maximum =    56.2933     weight =    12.0000    
+       average =    11.8794      variance=    19.0039     total  =    142.553    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "142.553"
+ Parameter: SAS1 <- "142.553"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "55"
+ SELRPN>     12 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -6.565000 XMAX =   -4.488000 XAVE =   -5.762750
+    YMIN =    2.891000 YMAX =    6.829000 YAVE =    4.696500
+    ZMIN =   12.709000 ZMAX =   16.616000 ZAVE =   14.734000
+    WMIN =    0.000000 WMAX =   56.293329 WAVE =   17.819130
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    4 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASP"
+ Parameter: NAME1 <- "ASP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 55       142.553      ASP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "56"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "56" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "56"
+ SELRPN>     17 atoms have been selected out of   1574
+ Statistics for   17 selected atoms:
+       minimum =    0.00000      maximum =    39.3886     weight =    17.0000    
+       average =    4.79689      variance=    9.80328     total  =    81.5471    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "81.5471"
+ Parameter: SAS1 <- "81.5471"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "56"
+ SELRPN>     17 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -10.493000 XMAX =   -5.051000 XAVE =   -7.947889
+    YMIN =    7.362000 YMAX =   12.042000 YAVE =    9.859778
+    ZMIN =   14.032000 ZMAX =   16.245000 ZAVE =   14.827000
+    WMIN =    0.000000 WMAX =   39.388649 WAVE =    9.060789
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    8 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLN"
+ Parameter: NAME1 <- "GLN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 56       81.5471      GLN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "57"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "57" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "57"
+ SELRPN>     12 atoms have been selected out of   1574
+ Statistics for   12 selected atoms:
+       minimum =    0.00000      maximum =    40.6687     weight =    12.0000    
+       average =    4.80370      variance=    11.1237     total  =    57.6444    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "57.6444"
+ Parameter: SAS1 <- "57.6444"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "57"
+ SELRPN>     12 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -5.142000 XMAX =   -1.099000 XAVE =   -3.109875
+    YMIN =   10.039000 YMAX =   12.762000 YAVE =   11.329750
+    ZMIN =   11.406000 ZMAX =   14.425000 ZAVE =   12.864875
+    WMIN =    0.000000 WMAX =   40.668719 WAVE =    7.205551
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    4 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASP"
+ Parameter: NAME1 <- "ASP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 57       57.6444      ASP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "58"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "58" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "58"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    51.1169     weight =    11.0000    
+       average =    12.3769      variance=    17.9763     total  =    136.146    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "136.146"
+ Parameter: SAS1 <- "136.146"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "58"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -2.830000 XMAX =   -0.531000 XAVE =   -1.832167
+    YMIN =   11.525000 YMAX =   14.469000 YAVE =   12.643333
+    ZMIN =   15.402000 ZMAX =   17.533000 ZAVE =   16.525500
+    WMIN =    0.356131 WMAX =   51.116909 WAVE =   22.691045
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 58       136.146      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "59"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "59" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "59"
+ SELRPN>     22 atoms have been selected out of   1574
+ Statistics for   22 selected atoms:
+       minimum =    0.00000      maximum =    68.6261     weight =    22.0000    
+       average =    9.80305      variance=    18.4509     total  =    215.667    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "215.667"
+ Parameter: SAS1 <- "215.667"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "59"
+ SELRPN>     22 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =   -2.638000 XMAX =    3.305000 XAVE =   -0.276889
+    YMIN =   14.262000 YMAX =   17.966000 YAVE =   16.477444
+    ZMIN =   10.903000 ZMAX =   14.783000 ZAVE =   13.031667
+    WMIN =    0.000000 WMAX =   68.626124 WAVE =   23.963019
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LYS"
+ Parameter: NAME1 <- "LYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 59       215.667      LYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "60"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "60" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "60"
+ SELRPN>     12 atoms have been selected out of   1574
+ Statistics for   12 selected atoms:
+       minimum =    0.00000      maximum =    29.0384     weight =    12.0000    
+       average =    6.53338      variance=    9.80464     total  =    78.4005    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "78.4005"
+ Parameter: SAS1 <- "78.4005"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "60"
+ SELRPN>     12 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -6.789000 XMAX =   -2.530000 XAVE =   -4.321500
+    YMIN =   13.799000 YMAX =   16.231000 YAVE =   15.361500
+    ZMIN =    9.166000 ZMAX =   12.782000 ZAVE =   11.020500
+    WMIN =    0.000000 WMAX =   29.038398 WAVE =    9.800068
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    4 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASP"
+ Parameter: NAME1 <- "ASP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 60       78.4005      ASP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "61"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "61" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "61"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    40.4321     weight =    11.0000    
+       average =    5.43968      variance=    12.3796     total  =    59.8365    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "59.8365"
+ Parameter: SAS1 <- "59.8365"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "61"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -8.939000 XMAX =   -5.886000 XAVE =   -7.564500
+    YMIN =   12.980000 YMAX =   15.017000 YAVE =   14.004167
+    ZMIN =   11.914000 ZMAX =   15.235000 ZAVE =   13.204667
+    WMIN =    0.000000 WMAX =   40.432124 WAVE =    9.972743
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 61       59.8365      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "62"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "62" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "62"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    7.20227     weight =    14.0000    
+       average =   0.514448      variance=    1.85487     total  =    7.20227    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "7.20227"
+ Parameter: SAS1 <- "7.20227"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "62"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -7.419000 XMAX =   -5.344000 XAVE =   -6.795143
+    YMIN =   10.043000 YMAX =   13.944000 YAVE =   12.107571
+    ZMIN =    8.061000 ZMAX =   10.997000 ZAVE =    9.498000
+    WMIN =    0.000000 WMAX =    7.202270 WAVE =    1.028896
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 62       7.20227      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "63"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "63" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "63"
+ SELRPN>     21 atoms have been selected out of   1574
+ Statistics for   21 selected atoms:
+       minimum =    0.00000      maximum =    33.0910     weight =    21.0000    
+       average =    1.71821      variance=    7.02969     total  =    36.0823    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "36.0823"
+ Parameter: SAS1 <- "36.0823"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "63"
+ SELRPN>     21 atoms have been selected out of   1574
+ STATISTICS FOR        12 SELECTED ATOMS:
+    XMIN =  -11.691000 XMAX =   -6.763000 XAVE =   -9.383250
+    YMIN =    6.833000 YMAX =    9.916000 YAVE =    8.249833
+    ZMIN =    6.675000 ZMAX =   13.876000 ZAVE =   10.253833
+    WMIN =    0.000000 WMAX =   33.090982 WAVE =    3.006859
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "TYR"
+ Parameter: NAME1 <- "TYR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 63       36.0823      TYR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "64"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "64" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "64"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    12.2153     weight =    11.0000    
+       average =    1.48668      variance=    3.59326     total  =    16.3535    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "16.3535"
+ Parameter: SAS1 <- "16.3535"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "64"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -6.498000 XMAX =   -4.093000 XAVE =   -5.500167
+    YMIN =    4.271000 YMAX =    8.136000 YAVE =    6.232667
+    ZMIN =    6.241000 ZMAX =    7.485000 ZAVE =    6.743500
+    WMIN =    0.000000 WMAX =   12.215335 WAVE =    2.725583
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 64       16.3535      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "65"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "65" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "65"
+ SELRPN>     17 atoms have been selected out of   1574
+ Statistics for   17 selected atoms:
+       minimum =    0.00000      maximum =    3.51731     weight =    17.0000    
+       average =   0.291477      variance=   0.848145     total  =    4.95512    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "4.95512"
+ Parameter: SAS1 <- "4.95512"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "65"
+ SELRPN>     17 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =  -10.465000 XMAX =   -5.370000 XAVE =   -7.264125
+    YMIN =    0.684000 YMAX =    4.387000 YAVE =    2.444375
+    ZMIN =    2.666000 ZMAX =    5.047000 ZAVE =    3.906750
+    WMIN =    0.000000 WMAX =    3.517305 WAVE =    0.619390
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "MET"
+ Parameter: NAME1 <- "MET"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 65       4.95512      MET
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "66"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "66" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "66"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    16.7422     weight =    11.0000    
+       average =    2.07729      variance=    4.95563     total  =    22.8502    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "22.8502"
+ Parameter: SAS1 <- "22.8502"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "66"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -5.810000 XMAX =   -3.081000 XAVE =   -4.493000
+    YMIN =   -1.354000 YMAX =    1.202000 YAVE =   -0.118333
+    ZMIN =    2.146000 ZMAX =    3.877000 ZAVE =    3.016500
+    WMIN =    0.000000 WMAX =   16.742161 WAVE =    3.808360
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 66       22.8502      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "67"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "67" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "67"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    11.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "67"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -8.317000 XMAX =   -4.545000 XAVE =   -6.227167
+    YMIN =   -2.660000 YMAX =   -0.741000 YAVE =   -1.844833
+    ZMIN =   -1.439000 ZMAX =    0.833000 ZAVE =   -0.428500
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 67       0      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "68"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "68" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "68"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    13.2661     weight =    14.0000    
+       average =    2.00009      variance=    4.20257     total  =    28.0012    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "28.0012"
+ Parameter: SAS1 <- "28.0012"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "68"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -5.762000 XMAX =   -2.034000 XAVE =   -4.108429
+    YMIN =   -6.705000 YMAX =   -3.971000 YAVE =   -5.249857
+    ZMIN =   -1.964000 ZMAX =    0.700000 ZAVE =   -0.816286
+    WMIN =    0.000000 WMAX =   13.266073 WAVE =    4.000174
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 68       28.0012      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "69"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "69" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "69"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    19.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "69"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -7.317000 XMAX =   -3.314000 XAVE =   -5.558375
+    YMIN =   -8.652000 YMAX =   -6.018000 YAVE =   -7.329625
+    ZMIN =   -7.713000 ZMAX =   -3.272000 ZAVE =   -5.275875
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   11 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LEU"
+ Parameter: NAME1 <- "LEU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 69       0      LEU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "70"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "70" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "70"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    31.8916     weight =    14.0000    
+       average =    4.49595      variance=    8.96088     total  =    62.9434    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "62.9434"
+ Parameter: SAS1 <- "62.9434"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "70"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -4.729000 XMAX =   -1.400000 XAVE =   -3.381714
+    YMIN =  -12.065000 YMAX =   -9.275000 YAVE =  -10.681143
+    ZMIN =   -5.182000 ZMAX =   -1.825000 ZAVE =   -3.696429
+    WMIN =    0.000000 WMAX =   31.891630 WAVE =    8.991909
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 70       62.9434      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "71"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "71" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "71"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    5.52990     weight =    19.0000    
+       average =   0.524188      variance=    1.31095     total  =    9.95957    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "9.95957"
+ Parameter: SAS1 <- "9.95957"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "71"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -6.041000 XMAX =   -0.778000 XAVE =   -3.563125
+    YMIN =  -13.033000 YMAX =  -10.449000 YAVE =  -11.813625
+    ZMIN =  -10.053000 ZMAX =   -6.272000 ZAVE =   -7.983500
+    WMIN =    0.000000 WMAX =    5.529899 WAVE =    1.244946
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   11 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LEU"
+ Parameter: NAME1 <- "LEU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 71       9.95957      LEU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "72"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "72" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "72"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    67.2642     weight =    14.0000    
+       average =    5.70596      variance=    17.2125     total  =    79.8834    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "79.8834"
+ Parameter: SAS1 <- "79.8834"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "72"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =   -1.933000 XMAX =    0.047000 XAVE =   -0.901429
+    YMIN =  -17.141000 YMAX =  -13.038000 YAVE =  -15.087286
+    ZMIN =  -10.325000 ZMAX =   -7.772000 ZAVE =   -9.080714
+    WMIN =    0.000000 WMAX =   67.264231 WAVE =   11.411918
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 72       79.8834      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "73"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "73" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "73"
+ SELRPN>     22 atoms have been selected out of   1574
+ Statistics for   22 selected atoms:
+       minimum =    0.00000      maximum =    36.7116     weight =    22.0000    
+       average =    3.24189      variance=    8.77125     total  =    71.3216    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "71.3216"
+ Parameter: SAS1 <- "71.3216"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "73"
+ SELRPN>     22 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =    0.778000 XMAX =    6.405000 XAVE =    3.391444
+    YMIN =  -14.313000 YMAX =  -13.098000 YAVE =  -13.680222
+    ZMIN =  -15.093000 ZMAX =  -10.248000 ZAVE =  -12.601444
+    WMIN =    0.000000 WMAX =   36.711566 WAVE =    7.924623
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LYS"
+ Parameter: NAME1 <- "LYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 73       71.3216      LYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "74"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "74" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "74"
+ SELRPN>     12 atoms have been selected out of   1574
+ Statistics for   12 selected atoms:
+       minimum =    0.00000      maximum =    56.4984     weight =    12.0000    
+       average =    10.0071      variance=    16.9462     total  =    120.085    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "120.085"
+ Parameter: SAS1 <- "120.085"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "74"
+ SELRPN>     12 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -1.635000 XMAX =    2.005000 XAVE =    0.226500
+    YMIN =  -19.244000 YMAX =  -14.255000 YAVE =  -16.512375
+    ZMIN =  -14.878000 ZMAX =  -12.801000 ZAVE =  -14.026375
+    WMIN =    0.000000 WMAX =   56.498395 WAVE =   15.010658
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    4 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASP"
+ Parameter: NAME1 <- "ASP"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 74       120.085      ASP
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "75"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "75" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "75"
+ SELRPN>     15 atoms have been selected out of   1574
+ Statistics for   15 selected atoms:
+       minimum =    0.00000      maximum =    24.0038     weight =    15.0000    
+       average =    3.20982      variance=    6.94283     total  =    48.1473    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "48.1473"
+ Parameter: SAS1 <- "48.1473"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "75"
+ SELRPN>     15 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =   -6.517000 XMAX =   -2.035000 XAVE =   -4.462222
+    YMIN =  -15.952000 YMAX =  -12.294000 YAVE =  -14.330222
+    ZMIN =  -13.823000 ZMAX =  -11.167000 ZAVE =  -12.497778
+    WMIN =    0.000000 WMAX =   24.003804 WAVE =    5.349700
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLU"
+ Parameter: NAME1 <- "GLU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 75       48.1473      GLU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "76"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "76" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "76"
+ SELRPN>     21 atoms have been selected out of   1574
+ Statistics for   21 selected atoms:
+       minimum =    0.00000      maximum =    5.29056     weight =    21.0000    
+       average =   0.476834      variance=    1.47231     total  =    10.0135    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "10.0135"
+ Parameter: SAS1 <- "10.0135"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "76"
+ SELRPN>     21 atoms have been selected out of   1574
+ STATISTICS FOR        12 SELECTED ATOMS:
+    XMIN =   -2.144000 XMAX =    1.268000 XAVE =   -0.586417
+    YMIN =  -12.192000 YMAX =   -5.153000 YAVE =   -8.673250
+    ZMIN =  -14.665000 ZMAX =  -11.756000 ZAVE =  -12.833583
+    WMIN =    0.000000 WMAX =    5.290561 WAVE =    0.834460
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "TYR"
+ Parameter: NAME1 <- "TYR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 76       10.0135      TYR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "77"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "77" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "77"
+ SELRPN>     15 atoms have been selected out of   1574
+ Statistics for   15 selected atoms:
+       minimum =    0.00000      maximum =    25.5172     weight =    15.0000    
+       average =    4.62830      variance=    7.36163     total  =    69.4245    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "69.4245"
+ Parameter: SAS1 <- "69.4245"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "77"
+ SELRPN>     15 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =   -1.530000 XMAX =    4.355000 XAVE =    1.060333
+    YMIN =  -13.208000 YMAX =  -11.073000 YAVE =  -11.622000
+    ZMIN =  -18.473000 ZMAX =  -14.830000 ZAVE =  -16.324778
+    WMIN =    0.000000 WMAX =   25.517228 WAVE =    7.713836
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLU"
+ Parameter: NAME1 <- "GLU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 77       69.4245      GLU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "78"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "78" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "78"
+ SELRPN>     24 atoms have been selected out of   1574
+ Statistics for   24 selected atoms:
+       minimum =    0.00000      maximum =    50.4875     weight =    24.0000    
+       average =    7.59953      variance=    13.5546     total  =    182.389    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "182.389"
+ Parameter: SAS1 <- "182.389"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "78"
+ SELRPN>     24 atoms have been selected out of   1574
+ STATISTICS FOR        11 SELECTED ATOMS:
+    XMIN =   -8.954000 XMAX =   -2.731000 XAVE =   -5.669000
+    YMIN =  -16.176000 YMAX =  -10.887000 YAVE =  -13.639455
+    ZMIN =  -18.929000 ZMAX =  -15.362000 ZAVE =  -17.083182
+    WMIN =    0.000000 WMAX =   50.487476 WAVE =   16.580797
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ARG"
+ Parameter: NAME1 <- "ARG"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 78       182.389      ARG
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "79"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "79" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "79"
+ SELRPN>     17 atoms have been selected out of   1574
+ Statistics for   17 selected atoms:
+       minimum =    0.00000      maximum =    14.5579     weight =    17.0000    
+       average =    1.73742      variance=    4.04287     total  =    29.5361    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "29.5361"
+ Parameter: SAS1 <- "29.5361"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "79"
+ SELRPN>     17 atoms have been selected out of   1574
+ STATISTICS FOR        10 SELECTED ATOMS:
+    XMIN =   -8.444000 XMAX =   -3.383000 XAVE =   -6.199100
+    YMIN =  -11.341000 YMAX =   -7.433000 YAVE =   -9.418100
+    ZMIN =  -17.792000 ZMAX =  -14.638000 ZAVE =  -16.357800
+    WMIN =    0.000000 WMAX =   14.557933 WAVE =    2.953615
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "HSD"
+ Parameter: NAME1 <- "HSD"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 79       29.5361      HSD
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "80"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "80" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "80"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    24.5461     weight =    14.0000    
+       average =    3.99030      variance=    7.36318     total  =    55.8642    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "55.8642"
+ Parameter: SAS1 <- "55.8642"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "80"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -5.165000 XMAX =   -2.372000 XAVE =   -3.993375
+    YMIN =   -6.315000 YMAX =   -2.396000 YAVE =   -4.212750
+    ZMIN =  -20.632000 ZMAX =  -16.927000 ZAVE =  -19.065625
+    WMIN =    0.000000 WMAX =   24.546146 WAVE =    6.983031
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 80       55.8642      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "81"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "81" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "81"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    17.5627     weight =    11.0000    
+       average =    2.51938      variance=    5.57316     total  =    27.7132    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "27.7132"
+ Parameter: SAS1 <- "27.7132"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "81"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -7.972000 XMAX =   -5.634000 XAVE =   -6.614000
+    YMIN =   -3.646000 YMAX =   -1.330000 YAVE =   -2.581333
+    ZMIN =  -17.513000 ZMAX =  -14.948000 ZAVE =  -16.398167
+    WMIN =    0.000000 WMAX =   17.562733 WAVE =    4.618861
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 81       27.7132      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "82"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "82" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "82"
+ SELRPN>     21 atoms have been selected out of   1574
+ Statistics for   21 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    21.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "82"
+ SELRPN>     21 atoms have been selected out of   1574
+ STATISTICS FOR        12 SELECTED ATOMS:
+    XMIN =   -6.594000 XMAX =   -3.721000 XAVE =   -5.010750
+    YMIN =   -8.267000 YMAX =    0.076000 YAVE =   -4.188417
+    ZMIN =  -14.071000 ZMAX =  -11.556000 ZAVE =  -12.720667
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "TYR"
+ Parameter: NAME1 <- "TYR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 82       0      TYR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "83"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "83" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "83"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    8.63776     weight =    14.0000    
+       average =   0.690140      variance=    2.21991     total  =    9.66196    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "9.66196"
+ Parameter: SAS1 <- "9.66196"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "83"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -10.303000 XMAX =   -7.754000 XAVE =   -9.074000
+    YMIN =   -1.018000 YMAX =    1.825000 YAVE =    0.209000
+    ZMIN =  -12.896000 ZMAX =   -8.933000 ZAVE =  -10.837714
+    WMIN =    0.000000 WMAX =    8.637761 WAVE =    1.380280
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 83       9.66196      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "84"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "84" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "84"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    11.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "84"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -9.559000 XMAX =   -7.366000 XAVE =   -8.455167
+    YMIN =    1.096000 YMAX =    3.642000 YAVE =    2.002500
+    ZMIN =   -8.666000 ZMAX =   -4.653000 ZAVE =   -6.991167
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "CYS"
+ Parameter: NAME1 <- "CYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 84       0      CYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "85"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "85" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "85"
+ SELRPN>     15 atoms have been selected out of   1574
+ Statistics for   15 selected atoms:
+       minimum =    0.00000      maximum =    12.8661     weight =    15.0000    
+       average =    1.26495      variance=    3.40648     total  =    18.9742    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "18.9742"
+ Parameter: SAS1 <- "18.9742"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "85"
+ SELRPN>     15 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -15.984000 XMAX =  -10.779000 XAVE =  -13.377778
+    YMIN =    2.307000 YMAX =    3.763000 YAVE =    3.000778
+    ZMIN =  -10.497000 ZMAX =   -4.908000 ZAVE =   -7.654222
+    WMIN =    0.000000 WMAX =   12.866081 WAVE =    2.108248
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLU"
+ Parameter: NAME1 <- "GLU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 85       18.9742      GLU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "86"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "86" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "86"
+ SELRPN>     10 atoms have been selected out of   1574
+ Statistics for   10 selected atoms:
+       minimum =    0.00000      maximum =    0.00000     weight =    10.0000    
+       average =    0.00000      variance=    0.00000     total  =    0.00000    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "0"
+ Parameter: SAS1 <- "0"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "86"
+ SELRPN>     10 atoms have been selected out of   1574
+ STATISTICS FOR         5 SELECTED ATOMS:
+    XMIN =  -14.023000 XMAX =  -11.737000 XAVE =  -12.999200
+    YMIN =    4.811000 YMAX =    7.277000 YAVE =    5.823000
+    ZMIN =   -5.125000 ZMAX =   -2.948000 ZAVE =   -3.946400
+    WMIN =    0.000000 WMAX =    0.000000 WAVE =    0.000000
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ALA"
+ Parameter: NAME1 <- "ALA"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 86       0      ALA
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "87"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "87" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "87"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    21.3429     weight =    14.0000    
+       average =    3.15598      variance=    7.08825     total  =    44.1837    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "44.1837"
+ Parameter: SAS1 <- "44.1837"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "87"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -17.914000 XMAX =  -15.102000 XAVE =  -16.603286
+    YMIN =    4.610000 YMAX =    7.249000 YAVE =    6.127857
+    ZMIN =   -4.570000 ZMAX =   -0.412000 ZAVE =   -2.554429
+    WMIN =    0.000000 WMAX =   21.342865 WAVE =    6.311959
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 87       44.1837      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "88"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "88" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "88"
+ SELRPN>     17 atoms have been selected out of   1574
+ Statistics for   17 selected atoms:
+       minimum =    0.00000      maximum =    2.79334     weight =    17.0000    
+       average =   0.446039      variance=   0.968770     total  =    7.58266    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "7.58266"
+ Parameter: SAS1 <- "7.58266"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "88"
+ SELRPN>     17 atoms have been selected out of   1574
+ STATISTICS FOR        10 SELECTED ATOMS:
+    XMIN =  -17.740000 XMAX =  -14.086000 XAVE =  -15.486600
+    YMIN =    8.545000 YMAX =   11.525000 YAVE =   10.173500
+    ZMIN =   -1.214000 ZMAX =    3.913000 ZAVE =    1.249400
+    WMIN =    0.000000 WMAX =    2.793343 WAVE =    0.758266
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "HSD"
+ Parameter: NAME1 <- "HSD"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 88       7.58266      HSD
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "89"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "89" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "89"
+ SELRPN>     22 atoms have been selected out of   1574
+ Statistics for   22 selected atoms:
+       minimum =    0.00000      maximum =    40.6421     weight =    22.0000    
+       average =    6.33444      variance=    11.9088     total  =    139.358    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "139.358"
+ Parameter: SAS1 <- "139.358"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "89"
+ SELRPN>     22 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =  -19.775000 XMAX =  -17.570000 XAVE =  -18.634111
+    YMIN =    9.124000 YMAX =   14.133000 YAVE =   11.530889
+    ZMIN =    0.476000 ZMAX =    4.843000 ZAVE =    2.671778
+    WMIN =    0.000000 WMAX =   40.642051 WAVE =   15.484197
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LYS"
+ Parameter: NAME1 <- "LYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 89       139.358      LYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "90"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "90" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "90"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    27.8774     weight =    14.0000    
+       average =    4.35394      variance=    8.07367     total  =    60.9552    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "60.9552"
+ Parameter: SAS1 <- "60.9552"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "90"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -16.696000 XMAX =  -14.051000 XAVE =  -15.442714
+    YMIN =   13.445000 YMAX =   15.780000 YAVE =   14.569429
+    ZMIN =   -1.821000 ZMAX =    2.007000 ZAVE =    0.133429
+    WMIN =    0.000000 WMAX =   27.877352 WAVE =    8.707888
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 90       60.9552      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "91"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "91" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "91"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    20.8620     weight =    11.0000    
+       average =    3.72762      variance=    6.18022     total  =    41.0038    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "41.0038"
+ Parameter: SAS1 <- "41.0038"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "91"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =  -18.583000 XMAX =  -16.103000 XAVE =  -17.309667
+    YMIN =   11.872000 YMAX =   14.249000 YAVE =   13.432500
+    ZMIN =   -5.391000 ZMAX =   -1.805000 ZAVE =   -3.579833
+    WMIN =    0.000000 WMAX =   20.861964 WAVE =    6.833968
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 91       41.0038      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "92"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "92" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "92"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    73.9626     weight =    14.0000    
+       average =    11.7068      variance=    20.4896     total  =    163.895    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "163.895"
+ Parameter: SAS1 <- "163.895"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "92"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -22.139000 XMAX =  -19.154000 XAVE =  -20.480571
+    YMIN =   10.696000 YMAX =   14.873000 YAVE =   13.146000
+    ZMIN =   -6.682000 ZMAX =   -4.705000 ZAVE =   -5.811714
+    WMIN =    0.000000 WMAX =   73.962628 WAVE =   23.413557
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "THR"
+ Parameter: NAME1 <- "THR"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 92       163.895      THR
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "93"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "93" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "93"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    45.5676     weight =    11.0000    
+       average =    7.19565      variance=    14.6216     total  =    79.1521    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "79.1521"
+ Parameter: SAS1 <- "79.1521"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "93"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =  -18.767000 XMAX =  -16.281000 XAVE =  -17.498500
+    YMIN =   10.460000 YMAX =   12.956000 YAVE =   11.584000
+    ZMIN =   -9.219000 ZMAX =   -6.584000 ZAVE =   -7.819833
+    WMIN =    0.000000 WMAX =   45.567553 WAVE =   13.192018
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 93       79.1521      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "94"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "94" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "94"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    23.7195     weight =    14.0000    
+       average =    3.67201      variance=    7.42804     total  =    51.4081    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "51.4081"
+ Parameter: SAS1 <- "51.4081"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "94"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -17.563000 XMAX =  -14.056000 XAVE =  -15.827714
+    YMIN =    6.993000 YMAX =    9.297000 YAVE =    8.288286
+    ZMIN =   -8.489000 ZMAX =   -6.840000 ZAVE =   -7.683286
+    WMIN =    0.000000 WMAX =   23.719504 WAVE =    7.344019
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    7 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PRO"
+ Parameter: NAME1 <- "PRO"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 94       51.4081      PRO
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "95"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "95" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "95"
+ SELRPN>     19 atoms have been selected out of   1574
+ Statistics for   19 selected atoms:
+       minimum =    0.00000      maximum =    25.4001     weight =    19.0000    
+       average =    2.28097      variance=    6.25102     total  =    43.3384    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "43.3384"
+ Parameter: SAS1 <- "43.3384"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "95"
+ SELRPN>     19 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -13.286000 XMAX =   -9.523000 XAVE =  -11.455571
+    YMIN =    6.631000 YMAX =   10.895000 YAVE =    8.892143
+    ZMIN =   -7.429000 ZMAX =   -5.236000 ZAVE =   -6.389857
+    WMIN =    0.000000 WMAX =   25.400103 WAVE =    6.191203
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   12 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ILE"
+ Parameter: NAME1 <- "ILE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 95       43.3384      ILE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "96"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "96" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "96"
+ SELRPN>     16 atoms have been selected out of   1574
+ Statistics for   16 selected atoms:
+       minimum =    0.00000      maximum =    53.3432     weight =    16.0000    
+       average =    4.81782      variance=    13.0927     total  =    77.0851    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "77.0851"
+ Parameter: SAS1 <- "77.0851"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "96"
+ SELRPN>     16 atoms have been selected out of   1574
+ STATISTICS FOR         7 SELECTED ATOMS:
+    XMIN =  -12.660000 XMAX =   -8.518000 XAVE =  -10.477857
+    YMIN =    6.163000 YMAX =    7.796000 YAVE =    6.930857
+    ZMIN =  -11.568000 ZMAX =   -8.572000 ZAVE =   -9.998143
+    WMIN =    0.000000 WMAX =   53.343248 WAVE =   11.012155
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "VAL"
+ Parameter: NAME1 <- "VAL"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 96       77.0851      VAL
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "97"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "97" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "97"
+ SELRPN>     22 atoms have been selected out of   1574
+ Statistics for   22 selected atoms:
+       minimum =    0.00000      maximum =    66.9337     weight =    22.0000    
+       average =    4.75659      variance=    14.5421     total  =    104.645    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "104.645"
+ Parameter: SAS1 <- "104.645"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "97"
+ SELRPN>     22 atoms have been selected out of   1574
+ STATISTICS FOR         9 SELECTED ATOMS:
+    XMIN =   -8.086000 XMAX =   -3.572000 XAVE =   -5.813778
+    YMIN =    3.330000 YMAX =   10.270000 YAVE =    6.671333
+    ZMIN =  -10.648000 ZMAX =   -8.222000 ZAVE =   -9.373111
+    WMIN =    0.000000 WMAX =   66.933682 WAVE =   11.627223
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "LYS"
+ Parameter: NAME1 <- "LYS"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 97       104.645      LYS
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "98"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "98" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "98"
+ SELRPN>     11 atoms have been selected out of   1574
+ Statistics for   11 selected atoms:
+       minimum =    0.00000      maximum =    28.3948     weight =    11.0000    
+       average =    5.38519      variance=    10.0118     total  =    59.2371    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "59.2371"
+ Parameter: SAS1 <- "59.2371"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "98"
+ SELRPN>     11 atoms have been selected out of   1574
+ STATISTICS FOR         6 SELECTED ATOMS:
+    XMIN =   -7.870000 XMAX =   -3.559000 XAVE =   -5.593833
+    YMIN =    2.675000 YMAX =    4.407000 YAVE =    3.380833
+    ZMIN =  -13.481000 ZMAX =  -11.784000 ZAVE =  -12.827667
+    WMIN =    0.084250 WMAX =   28.394812 WAVE =    9.872850
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    5 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "SER"
+ Parameter: NAME1 <- "SER"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 98       59.2371      SER
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "99"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "99" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "99"
+ SELRPN>     20 atoms have been selected out of   1574
+ Statistics for   20 selected atoms:
+       minimum =    0.00000      maximum =    20.9865     weight =    20.0000    
+       average =    1.55197      variance=    4.93643     total  =    31.0393    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "31.0393"
+ Parameter: SAS1 <- "31.0393"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "99"
+ SELRPN>     20 atoms have been selected out of   1574
+ STATISTICS FOR        11 SELECTED ATOMS:
+    XMIN =   -3.933000 XMAX =   -0.845000 XAVE =   -2.144273
+    YMIN =   -1.893000 YMAX =    1.901000 YAVE =    0.086273
+    ZMIN =  -15.322000 ZMAX =  -10.534000 ZAVE =  -13.008455
+    WMIN =    0.000000 WMAX =   20.986548 WAVE =    2.821759
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    9 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "PHE"
+ Parameter: NAME1 <- "PHE"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 99       31.0393      PHE
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "100"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "100" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "100"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    58.6974     weight =    14.0000    
+       average =    4.49439      variance=    15.0420     total  =    62.9215    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "62.9215"
+ Parameter: SAS1 <- "62.9215"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "100"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =   -5.031000 XMAX =   -0.026000 XAVE =   -2.727250
+    YMIN =   -1.653000 YMAX =    1.304000 YAVE =   -0.304500
+    ZMIN =  -19.644000 ZMAX =  -16.441000 ZAVE =  -17.925625
+    WMIN =    0.000000 WMAX =   58.697439 WAVE =    7.865186
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 100       62.9215      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "101"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "101" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "101"
+ SELRPN>     24 atoms have been selected out of   1574
+ Statistics for   24 selected atoms:
+       minimum =    0.00000      maximum =    45.5675     weight =    24.0000    
+       average =    3.14795      variance=    9.40050     total  =    75.5509    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "75.5509"
+ Parameter: SAS1 <- "75.5509"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "101"
+ SELRPN>     24 atoms have been selected out of   1574
+ STATISTICS FOR        11 SELECTED ATOMS:
+    XMIN =   -1.754000 XMAX =    2.357000 XAVE =    0.037182
+    YMIN =   -8.852000 YMAX =   -2.975000 YAVE =   -6.039909
+    ZMIN =  -20.347000 ZMAX =  -16.502000 ZAVE =  -17.932182
+    WMIN =    0.000000 WMAX =   45.567511 WAVE =    6.868263
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE   13 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ARG"
+ Parameter: NAME1 <- "ARG"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 101       75.5509      ARG
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "102"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "102" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "102"
+ SELRPN>     14 atoms have been selected out of   1574
+ Statistics for   14 selected atoms:
+       minimum =    0.00000      maximum =    65.5775     weight =    14.0000    
+       average =    9.39445      variance=    17.8733     total  =    131.522    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "131.522"
+ Parameter: SAS1 <- "131.522"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "102"
+ SELRPN>     14 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =    0.496000 XMAX =    3.892000 XAVE =    2.050625
+    YMIN =   -4.274000 YMAX =   -1.083000 YAVE =   -2.745750
+    ZMIN =  -23.085000 ZMAX =  -19.431000 ZAVE =  -21.537625
+    WMIN =    0.000000 WMAX =   65.577538 WAVE =   16.440284
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    6 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "ASN"
+ Parameter: NAME1 <- "ASN"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 102       131.522      ASN
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "103"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "103" and "103".
+ IF test evaluated as true.  Performing command
+  
+ CHARMM>     
+  
+ CHARMM>    scalar wmain stat select ires @index  end
+ Parameter: INDEX -> "103"
+ SELRPN>     16 atoms have been selected out of   1574
+ Statistics for   16 selected atoms:
+       minimum =    0.00000      maximum =    48.9062     weight =    16.0000    
+       average =    12.8715      variance=    18.1785     total  =    205.944    
+  
+ CHARMM>    set sas1 ?stot
+ RDCMND substituted energy or value "?STOT" to "205.944"
+ Parameter: SAS1 <- "205.944"
+  
+ CHARMM>     
+  
+ CHARMM>    coor stat sele ires @index end
+ Parameter: INDEX -> "103"
+ SELRPN>     16 atoms have been selected out of   1574
+ STATISTICS FOR         8 SELECTED ATOMS:
+    XMIN =    1.259000 XMAX =    5.884000 XAVE =    3.536250
+    YMIN =   -1.258000 YMAX =    1.629000 YAVE =    0.364250
+    ZMIN =  -21.204000 ZMAX =  -18.015000 ZAVE =  -19.466375
+    WMIN =    0.000000 WMAX =   48.906202 WAVE =   25.743019
+
+ **** WARNING **** FOR THIS OPERATION, THERE WERE    8 MISSING COORDINATES
+
+  
+ CHARMM>    set name1 = ?selresn
+ RDCMND substituted energy or value "?SELRESN" to "GLU"
+ Parameter: NAME1 <- "GLU"
+  
+ CHARMM>     
+  
+ CHARMM>    write title unit 9
+ RDTITL> * 103       205.944      GLU
+ RDTITL> *
+  
+ CHARMM>     
+  
+ CHARMM>     incr index by 1
+ Parameter: INDEX <- "104"
+  
+ CHARMM>    if index le ?nres goto loop_res
+ RDCMND substituted energy or value "?NRES" to "103"
+ Comparing "104" and "103".
+ IF test evaluated as false.  Skipping command
+  
+ CHARMM>     
+  
+ CHARMM>    open unit 1 write card name cl.cor
+ VOPEN> Attempting to open::cl.cor::
+ OPNLGU> Unit  1 opened for WRITE access to cl.cor
+  
+ CHARMM>    write coor pdb unit 1 card
+ RDTITL> CLOSE UNIT 1
+ RDTITL> No title read.
+  Write CHARMM-pdb format
+  
+ CHARMM>    close unit 1
+ VCLOSE: Closing unit    1 with status "KEEP"
+  
+ CHARMM>     
+  
+ CHARMM>     
+  
+ CHARMM>    stop
+ VCLOSE: Closing unit    9 with status "KEEP"
+$$$$$$  New timer profile $$$$$
+ Total time                      0.78 Other:            0.00
+
+                    NORMAL TERMINATION BY NORMAL STOP
+                    MAXIMUM STACK SPACE USED IS   32030
+                    STACK CURRENTLY IN USE IS         0
+                    MOST SEVERE WARNING WAS AT LEVEL  2
+                    HEAP PRINTOUT-  HEAP SIZE          2048000
+                    SPACE CURRENTLY IN USE IS            13824
+                    MAXIMUM SPACE USED IS                42918
+                    FREE LIST
+  PRINHP> ADDRESS:               1 LENGTH:         2033676 NEXT:         2047501
+  PRINHP> ADDRESS:         2047501 LENGTH:             500 NEXT:               0
+
+                    $$$$$ JOB ACCOUNTING INFORMATION $$$$$
+                     ELAPSED TIME:     0.78  SECONDS 
+                         CPU TIME:     0.77  SECONDS 
