@@ -13,16 +13,47 @@ close unit 1
 prnlev 5
 wrnlev 2
 
-open unit 11 read card name ch1_initial.psf
-read psf card unit 11
-close unit 11
+READ SEQUENCE CARD
+* CH1 domain of Igg residues 123 - 215
+* missing loop 133-137 modeled based on mouse seq
+*
+93
+THR THR PRO PRO SER VAL TYR PRO LEU ALA PRO GLY SER
+SER MET VAL THR LEU GLY CYS LEU VAL LYS GLY TYR PHE
+PRO GLU PRO VAL THR VAL THR TRP ASN SER GLY SER LEU
+SER SER GLY VAL HSD THR PHE PRO ALA VAL LEU GLN SER
+ASP LEU TYR THR LEU SER SER SER VAL THR VAL THR SER
+SER THR TRP PRO SER GLU THR VAL THR CYS ASN VAL ALA
+HSD PRO ALA SER SER THR LYS VAL ASP LYS LYS ILE VAL
+PRO ARG
+
 
 prnlev 6
-open unit 11 read form name "ch1_mini.cor"
-read coor unit 11 card
+generate ch1 warn setup
+
+! rename atoms to ensure pdb compatibility with charmm
+
+rename atom cd1 select resname ile .and. type cd end
+rename atom oxt select type ot1 end
+rename atom o select ires ?nres .and. type ot2 end
+
+open unit 11 read form name "ch1.pdb"
+read coor pdb offset -122 unit 11 sele segid ch1 end
 close unit 11
 
 print coor sele type oxt end
+
+rename atom cd select resname ile .and. type cd1 end
+rename atom ot1 select type oxt end
+rename atom ot2 select ires ?nres .and. type o end
+
+print coor sele segid ch1 .and. .not. type H* end
+
+open unit 1 write card name ch1_initial.psf
+write psf unit 1 card
+
+open unit 1 write card name ch1_initial.cor
+write coor unit 1 card
 
 open write unit 9 card name ch1-sasa.dat 
 
@@ -147,9 +178,9 @@ endif
 
 ! Si for strand "i", Li for loop "i" and Hi for helix "i" ??????? 
 
-coor secs verbose sele all end
-set nalpha ?nalpha
-set nbeta ?nbeta
+!coor secs verbose sele all end
+!set nalpha ?nalpha
+!set nbeta ?nbeta
 
 calc x2  @sas1/@x1
 
@@ -169,13 +200,13 @@ label gly_sele
 
 if @index .eq. 1 then 
 echu 9
-echo index time SASA type nalpha nbeta Gly-X-Gly(x1) x1/sasa Distance_y Distance_z Distance_r
+echo index SASA type nalpha nbeta Gly-X-Gly(x1) x1/sasa Distance_y Distance_z Distance_r
 endif
 
 calc r sqrt ( ?yave * ?yave + ?zave * ?zave )
 
 write title unit 9
-* @index    @sas1      @name1   @type   @nalpha  @nbeta @x1 @x2 ?yave ?zave @r
+* @index @sas1 @name1 @type @x1 @x2 ?yave ?zave @r
 *
    
 !coor secs sele ires @index end sele all end
