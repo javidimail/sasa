@@ -49,6 +49,25 @@ rename atom ot2 select ires ?nres .and. type o end
 
 print coor sele segid ch1 .and. .not. type H* end
 
+! Just to test how hydrogens affect sasa values
+define nonH select .not. hydrogen end
+set nonHatoms = ?nsel
+define missing select .not. hydrogen .and. .not. initialized end
+set missingatoms = ?nsel
+
+Calc fraction = (@nonHatoms - @missingatoms) / @nonHatoms
+! if fraction le 0.8 goto toomanywrong
+
+print coor select missing end
+
+!  Build missing atoms if just a few
+ic param
+ic build
+
+coor init sele type H* end
+
+hbuild
+
 open unit 1 write card name ch1_initial.psf
 write psf unit 1 card
 
