@@ -55,7 +55,7 @@ write psf unit 1 card
 open unit 1 write card name ch1_initial.cor
 write coor unit 1 card
 
-open write unit 9 card name ch1-sasa.dat 
+open write unit 9 card name ch1_sasa.dat 
 
 set index 1
 label loop_res
