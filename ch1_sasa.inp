@@ -91,16 +91,9 @@ calc r sqrt ( ?yave * ?yave + ?zave * ?zave )
 write title unit 9
 * @index @sas1 @name1  @r
 *
-   
-!coor secs sele ires @index end sele all end
-!echo ?alpha ?beta
 
- incr index by 1
+incr index by 1
 if index le ?nres goto loop_res
-
-open unit 1 write card name ch11.cor
-write coor pdb unit 1 card
-close unit 1
 
 
 stop 

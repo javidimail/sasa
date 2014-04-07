@@ -85,9 +85,5 @@ write title unit 9
  incr index by 1
 if index le ?nres goto loop_res
 
-open unit 1 write card name cl.cor
-write coor pdb unit 1 card
-close unit 1
-
 
 stop 
